@@ -1,69 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website - Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <div class="topnav">
-        <a class="active" href="home.html">Home</a>
-        <a href="#">About_Us</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact_Us</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About-Me</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact-Us</a>
     </div>
 
-    <section>
-        <img class="mySlides" src="nature1.jpg" style="height:500px;">
-        <img class="mySlides" src="nature2.jpg" style="height:500px;">
-        <img class="mySlides" src="nature3.jpeg" style="height:500px;">
-    </section>
-
+    <br>
+    <span class="border trans" style="font-size:40px;">
+        <center>Our Food Gallery</center>
+    </span>
+    <br>
 
     <section class="section section-dark">
-
-
-
-        <h2>section one</h2>
-        <p>
-            Web development is the work involved in developing a
-
-            website for the Internet (World Wide Web) or an
-
-            intranet (a private network).
-
-        </p>
-
-        <div class="pimg3">
-            <div claass="ptext">
-
-                <span class="border trans">
-                    image two text
-                </span>
-
-            </div>
-        </div>
-
-
-
+        <h2>Featured Dishes</h2>
+        <p>Take a look at some of our mouth-watering preparations.</p>
+        <br>
+        
+        <center>
+            <section style="max-width:800px; overflow:hidden;">
+                <img class="mySlides" src="image1.jpg" style="height:400px; width:100%; display:none;">
+                <img class="mySlides" src="image2.jpg" style="height:400px; width:100%; display:none;">
+                <img class="mySlides" src="image3.jpg" style="height:400px; width:100%; display:none;">
+            </section>
+        </center>
     </section>
 
-    <div class="footer">
-     <p>@copy all right and reserved by ronav</p>
+    <script>
+        var myIndex = 0;
+        carousel();
 
-    </div>
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000); // Changes image every 3 seconds
+        }
+    </script>
 
-
-
-
+    <section class="section section-dark">
+        <span>All @copy rights reserved by Swati Singh</span>
+    </section>
 
 </body>
-
-
-</body>
-<script src="script.js"></script>
-
 </html>
