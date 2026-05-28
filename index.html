@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Website - Gallery</title>
+    <title>Website - Slider</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About-Me</a>
-        <a class="active" href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact-Us</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact Us</a>
     </div>
 
     <br>
     <span class="border trans" style="font-size:40px;">
-        <center>Our Food Gallery</center>
+        <center>Welcome to Sam's Restaurant</center>
     </span>
     <br>
 
     <section class="section section-dark">
-        <h2>Featured Dishes</h2>
-        <p>Take a look at some of our mouth-watering preparations.</p>
-        <br>
-        
-        <center>
-            <section style="max-width:800px; overflow:hidden;">
-                <img class="mySlides" src="image1.jpg" style="height:400px; width:100%; display:none;">
-                <img class="mySlides" src="image2.jpg" style="height:400px; width:100%; display:none;">
-                <img class="mySlides" src="image3.jpg" style="height:400px; width:100%; display:none;">
-            </section>
-        </center>
+        <h2>Our Delicious Menu Sliders</h2>
+        <p>Take a look at our special dishes below. The slider will automatically change images every 3 seconds!</p>
     </section>
+
+    <center>
+        <section style="max-width:1340px; overflow:hidden;">
+            <img class="mySlides" src="image1.jpg" style="height:500px; width:1340px; display:none;">
+            <img class="mySlides" src="image2.jpg" style="height:500px; width:1340px; display:none;">
+            <img class="mySlides" src="image3.jpg" style="height:500px; width:1340px; display:none;">
+            <img class="mySlides" src="image4.jpg" style="height:500px; width:1340px; display:none;">
+            <img class="mySlides" src="image5.jpg" style="height:500px; width:1340px; display:none;">
+        </section>
+    </center>
 
     <script>
         var myIndex = 0;
@@ -41,12 +44,12 @@
             var i;
             var x = document.getElementsByClassName("mySlides");
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+                x[i].style.display = "none";  // सारी इमेजेस को छुपाता है
             }
             myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 3000); // Changes image every 3 seconds
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";  // सिर्फ एक इमेज को दिखाता है
+            setTimeout(carousel, 3000);  // हर 3 सेकंड में इमेज बदलेगी
         }
     </script>
 
@@ -55,4 +58,5 @@
     </section>
 
 </body>
+
 </html>
